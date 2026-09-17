@@ -1,0 +1,1 @@
+from .std_sync_fifo import SyncFIFO
