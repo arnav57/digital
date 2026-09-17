@@ -27,7 +27,7 @@ class BitMonitor:
 	@property
 	def is_low(self) -> bool:
 		"""Returns True if the signal is logic 0."""
-		return self.sig.value == 10
+		return self.sig.value == 0
 
 	def start(self) -> None:
 		if self._task is None or self._task.done():

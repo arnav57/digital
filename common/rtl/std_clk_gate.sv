@@ -16,7 +16,8 @@ module std_clk_gate (
 		if (~rstn_i) begin
 			gate_l <= 1'b0;
 		end else begin
-			gate_l <= clk_en_i;
+			if (~clk_i)
+				gate_l <= clk_en_i;
 		end
 	end
 
