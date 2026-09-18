@@ -1,0 +1,92 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/arnav/Documents/deepseek/projects/capstone/sim_build
+T_opt
+!i145 1
+!i144 0
+!s110 1789756255
+VZdiW@JTD;bd_W3EL[f;zP3
+04 11 4 work cordic_pipe fast 0
+=1-44fa661251ed-6aad835f-f-7568
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U15 
+!s135 nogc
+o-quiet +acc -auto_acc_if_foreign -work top
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+OL;O;2025.2;82
+R2
+vcordic_pipe
+2C:\Users\arnav\Documents\deepseek\projects\capstone\compute\rtl\cordic_pipe.sv
+!s10a 1789756251
+Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+!s110 1789756253
+!i10b 1
+!s100 jWNhU<Zh16LnWaiko;HJ`1
+ILA5IDzU5:9VJ60_PI>=1n2
+S1
+R2
+w1789756251
+8C:\Users\arnav\Documents\deepseek\projects\capstone\compute\rtl\cordic_pipe.sv
+FC:\Users\arnav\Documents\deepseek\projects\capstone\compute\rtl\cordic_pipe.sv
+!i122 7
+L0 6 84
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2025.2;82
+r1
+!s85 0
+31
+!s108 1789756253.000000
+!s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\compute\\rtl\\cordic_pipe.sv|
+!s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\compute\rtl\cordic_pipe.sv|
+!i113 0
+Z6 o-quiet -work top -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0 defaultOptions 1085333592
+vcordic_stage
+2C:\Users\arnav\Documents\deepseek\projects\capstone\compute\rtl\cordic_stage.sv
+!s10a 1789756133
+R3
+!s110 1789756211
+!i10b 1
+!s100 VLV0:Og_Nji_N68X56k<N1
+IEZ:M?iCIcWA>jdFYm8eK@1
+S1
+R2
+w1789756133
+8C:\Users\arnav\Documents\deepseek\projects\capstone\compute\rtl\cordic_stage.sv
+FC:\Users\arnav\Documents\deepseek\projects\capstone\compute\rtl\cordic_stage.sv
+!i122 5
+L0 6 77
+R4
+R5
+r1
+!s85 0
+31
+!s108 1789756211.000000
+!s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\compute\\rtl\\cordic_stage.sv|
+!s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\compute\rtl\cordic_stage.sv|
+!i113 0
+R6
+R7

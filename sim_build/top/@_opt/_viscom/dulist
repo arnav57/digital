@@ -1,0 +1,15 @@
+2 12 cordic_stage 4 fast 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__1 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__2 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__3 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__4 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__5 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__6 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__7 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__8 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 7 fast__9 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 8 fast__10 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 8 fast__11 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 8 fast__12 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+2 12 cordic_stage 8 fast__13 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 146 0
+1 11 cordic_pipe 4 fast 65 C:/Users/arnav/Documents/deepseek/projects/capstone/sim_build/top 0 0 0 0 614 0

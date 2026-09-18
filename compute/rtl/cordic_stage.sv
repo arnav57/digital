@@ -18,11 +18,13 @@ module cordic_stage #(
     input wire signed [VECTOR_WIDTH-1:0]    x_i, // current value of x-vector
     input wire signed [VECTOR_WIDTH-1:0]    y_i, // current value of y-vector
     input wire signed [BAR_ANGLE_WIDTH-1:0] z_i, // current angle "error" (BAR)
+    input wire                              en_i,
 
     // to next cordic_stage
     output wire signed [VECTOR_WIDTH-1:0]    x_o, // current value of x-vector
     output wire signed [VECTOR_WIDTH-1:0]    y_o, // current value of y-vector
-    output wire signed [BAR_ANGLE_WIDTH-1:0] z_o, // current angle "error" (BAR)
+    output wire signed [BAR_ANGLE_WIDTH-1:0] z_o,  // current angle "error" (BAR)
+    output wire                              valid_o
 );
 
 logic signed [VECTOR_WIDTH-1:0]    x_r;
@@ -46,23 +48,37 @@ always_ff @(posedge clk_i, negedge rstn_i) begin
         y_r <= '0;
         z_r <= '0;
     end else begin
-        if (step_down) begin
-            // if we rotate CCW (-ve)
-            x_r <= x_i + y_asr;
-            y_r <= y_i - x_asr;
-            z_r <= z_i + theta_i;
-        end else begin
-            // if we rotate CW (+ve)
-            x_r <= x_i - y_asr;
-            y_r <= y_i + x_asr;
-            z_r <= z_i - theta_i;
+        if (en_i) begin
+            if (step_down) begin
+                // if we rotate CCW (-ve)
+                x_r <= x_i + y_asr;
+                y_r <= y_i - x_asr;
+                z_r <= z_i + theta_i;
+            end else begin
+                // if we rotate CW (+ve)
+                x_r <= x_i - y_asr;
+                y_r <= y_i + x_asr;
+                z_r <= z_i - theta_i;
+            end
         end
+    end
+end
+
+// drive valid as a 1UI delay on en
+logic valid_r;
+always_ff @(posedge clk_i, negedge rstn_i) begin
+    if (~rstn_i) begin
+        valid_r <= 1'b0;
+    end else begin
+        valid_r <= en_i;
     end
 end
 
 assign x_o = x_r;
 assign y_o = y_r;
 assign z_o = z_r;
+assign valid_o = valid_r;
 
 endmodule : cordic_stage
+
 `default_nettype wire

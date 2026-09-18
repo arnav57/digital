@@ -29,8 +29,8 @@ class ClockMonitor:
 
     async def _run(self):
         while True:
-            edge_trigger = Edge(self.clk)
-            timeout = Timer(self.timeout_ns, units="ns")
+            edge_trigger = self.clk.value_change
+            timeout = Timer(self.timeout_ns, unit="ns")
 
             first_event = await First(edge_trigger, timeout)
 

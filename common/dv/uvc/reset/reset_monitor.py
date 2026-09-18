@@ -39,7 +39,7 @@ class ResetMonitor:
             self._last_val = int(init_val)
 
         while True:
-            await Edge(self.rstn)
+            await self.rstn.value_change
             curr = self.rstn.value
 
             # Ignore unresolvable states (X, Z)

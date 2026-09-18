@@ -1,0 +1,77 @@
+# ** Note: (vsim-220) 'C:/altera/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# vsim -quiet -c -onfinish exit -pli "C:/Users/arnav/miniconda3/Lib/site-packages/cocotb/libs/cocotbvpi_modelsim.dll" top.cordic_pipe -do "log -recursive /*;run -all; quit" 
+# Start time: 15:02:40 on Sep 18,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: 'C:\Users\arnav\miniconda3\python314.dll'
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:234  in gpi_load_users                  Running entry func 'initialize' from loaded library 'C:\Users\arnav\miniconda3\Lib\site-packages\cocotb\simulator.cp314-win_amd64.pyd'
+#      -.--ns INFO     pygpi                              ..ib\pygpi\embed.cpp:115  in initialize                      Using Python 3.14.0 interpreter at C:\Users\arnav\miniconda3\python.exe
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: FLI support registered
+# log -recursive /*
+# run -all
+#      0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1789758161
+# 
+#      0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from C:\Users\arnav\miniconda3\Lib\site-packages\cocotb
+# 
+#      0.00ns INFO     cocotb.initialize                  Running on ModelSim for Questa Altera Starter FPGA Edition-64 version 2025.1 2025.05
+# 
+#      0.00ns INFO     cocotb.regression                  Running tests
+# 
+#      0.00ns INFO     cocotb.regression                  running cordic_tests.cordic_base_test (1/1)
+# 
+#      0.00ns INFO     cordic                             Starting task
+# 
+#      0.00ns INFO     cordic-base-test                   chose value: '-3327' = '-18.2757568359375 deg'
+# 
+#      0.00ns INFO     cordic-base-test                   Actual sin: '-0.3135907040832217'
+# 
+#      0.00ns INFO     cordic-base-test                   Actual cos: '0.9495582500892661'
+# 
+#      0.00ns INFO     cordic-base-test                   Expecting sin: '-0.5164086278560862'
+# 
+#      0.00ns INFO     cordic-base-test                   Expecting cos: '1.5636945439169998'
+# 
+#      5.00ns INFO     cordic-clk                         Clock started toggling
+# 
+#     30.00ns INFO     cordic-rstn                        Reset has deasserted (1)
+# 
+#    170.00ns INFO     cordic-base-test                   Error (sin) = -0.01744622551233621
+# 
+#    170.00ns INFO     cordic-base-test                   Error (cos) = -0.005641393583000198
+# 
+#    170.00ns INFO     cordic-base-test                   Error (deg) = -0.010986328125 (-2.0 LSb)
+# 
+#    170.00ns INFO     cocotb.regression                  cordic_tests.cordic_base_test passed
+# 
+#    170.00ns INFO     cocotb.regression                  ***************************************************************************************
+# 
+#                                                         ** TEST                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+# 
+#                                                         ***************************************************************************************
+# 
+#                                                         ** cordic_tests.cordic_base_test   PASS         170.00           0.01      14182.03  **
+# 
+#                                                         ***************************************************************************************
+# 
+#                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 170.00           0.06       2722.42  **
+# 
+#                                                         ***************************************************************************************
+# 
+# ** Note: $finish
+#    Time: 170 ns  Iteration: 4  Instance: /cordic_pipe File: C:/Users/arnav/Documents/deepseek/projects/capstone/compute/rtl/cordic_pipe.sv
+# End time: 15:02:41 on Sep 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
