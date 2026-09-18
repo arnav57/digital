@@ -8,4 +8,4 @@ version = "0.1.0"
 dependencies = ["cocotb"]
 
 [tool.setuptools.packages.find]
-include = ["common*", "math*]
+include = ["common*", "compute*"]
