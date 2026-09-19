@@ -11,6 +11,9 @@ def test_cordic_pipe():
     sources = [
         rtl_root / "cordic_stage.sv",
         rtl_root / "cordic_pipe.sv",
+        rtl_root / "cordic_fold.sv",
+        rtl_root / "cordic_transform.sv",
+        rtl_root / "cordic.sv",
     ]
 
     sys.path.append(str(tests_dir))
@@ -18,13 +21,13 @@ def test_cordic_pipe():
     runner = get_runner(sim)
     runner.build(
         sources=sources,
-        hdl_toplevel="cordic_pipe",
+        hdl_toplevel="cordic",
         build_dir=proj_root / "sim_build",
         waves = True
     )
 
     runner.test(
-        hdl_toplevel="cordic_pipe",
+        hdl_toplevel="cordic",
         test_module='cordic_tests',
         waves = True
     )

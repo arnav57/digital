@@ -1,4 +1,4 @@
-// Single Pipelined CORDIC Stage
+// Single Pipelined CORDIC Stage [-90 to 90] deg
 
 `timescale 1ns/1ps
 `default_nettype none
@@ -19,6 +19,10 @@ module cordic_stage #(
     input wire signed [VECTOR_WIDTH-1:0]    y_i, // current value of y-vector
     input wire signed [BAR_ANGLE_WIDTH-1:0] z_i, // current angle "error" (BAR)
     input wire                              en_i,
+
+    // metadata for angle folding
+    input wire        [3-1:0]               fold_i,
+    output wire       [3-1:0]               fold_o,
 
     // to next cordic_stage
     output wire signed [VECTOR_WIDTH-1:0]    x_o, // current value of x-vector
@@ -65,12 +69,16 @@ always_ff @(posedge clk_i, negedge rstn_i) begin
 end
 
 // drive valid as a 1UI delay on en
+// also flop the fold decision and propagate it
 logic valid_r;
+logic [2:0] fold_r;
 always_ff @(posedge clk_i, negedge rstn_i) begin
     if (~rstn_i) begin
         valid_r <= 1'b0;
+        fold_r  <= 3'b0;
     end else begin
         valid_r <= en_i;
+        fold_r  <= fold_i;
     end
 end
 
@@ -78,6 +86,7 @@ assign x_o = x_r;
 assign y_o = y_r;
 assign z_o = z_r;
 assign valid_o = valid_r;
+assign fold_o  = fold_r;
 
 endmodule : cordic_stage
 

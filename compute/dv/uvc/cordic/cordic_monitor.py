@@ -1,60 +1,37 @@
 from common.dv.uvc import BusMonitor
-import math
+
 
 class CordicVectorMonitor(BusMonitor):
+	"""Signed fixed-point vector (default Q3.15 in an 18 bit bus)."""
 
-	def __init__(self, sig, name:str = "cordic-vec"):
+	def __init__(self, sig, name: str = "cordic-vec", fractional_bits: int = 15):
 		super().__init__(sig, name)
-	
-	def _to_decimal(self, raw_value: int, fractional_bits: int = 15, total_bits: int = 18) -> float:
-		# Handle two's complement signed integer if a fixed bit-width is specified
-		raw_value = int(raw_value)
-		if total_bits is not None:
-			sign_bit = 1 << (total_bits - 1)
-			if raw_value & sign_bit:
-				raw_value -= (1 << total_bits)
-				
-		# Convert Q-format to decimal
-		return raw_value / (2 ** fractional_bits)
-	
+		self.fractional_bits = fractional_bits
+
+	def to_decimal(self, value) -> float:
+		# bus width comes from the value itself, no hard-coded 18
+		return value.to_signed() / (2 ** self.fractional_bits)
+
 	@property
 	def decimal_value(self) -> float:
-		return self._to_decimal(self.sig.value)
+		return self.to_decimal(self.value)
 
-	
-	async def _run(self) -> None:
-		while True:
-			curr_val = self.value
-			await self.sig.value_change
-			new_val  = self.value
+	def _format(self, value) -> str:
+		return str(self.to_decimal(value))
 
-			if curr_val.is_resolvable and new_val.is_resolvable:
-				self.logger.info(f"transition '{self._to_decimal(curr_val)}' to '{self._to_decimal(new_val)}'")
 
 class CordicAngleMonitor(BusMonitor):
+	"""Signed BAR angle (2**width == 360 degrees)."""
 
-	def __init__(self, sig, name:str = "cordic-ang"):
+	def __init__(self, sig, name: str = "cordic-ang"):
 		super().__init__(sig, name)
-	
-	def _to_degrees(self, raw_value: int, num_bits: int = 16) -> float:
-		raw_value = int(raw_value)
 
-		sign_bit = 1 << (num_bits - 1)
-		if raw_value & sign_bit:
-			raw_value -= 1 << num_bits
+	def to_degrees(self, value) -> float:
+		return value.to_signed() * 360.0 / (2 ** len(value))
 
-		return raw_value * 360.0 / (2 ** num_bits)
-	
 	@property
 	def angle_value(self) -> float:
-		return self._to_degrees(self.sig.value)
+		return self.to_degrees(self.value)
 
-	async def _run(self) -> None:
-		while True:
-			curr_val = self.value
-			await self.sig.value_change
-			new_val  = self.value
-
-			if curr_val.is_resolvable and new_val.is_resolvable:
-				self.logger.info(f"transition '{self._to_degrees(curr_val)}' to '{self._to_degrees(new_val)}'")
-
+	def _format(self, value) -> str:
+		return str(self.to_degrees(value))

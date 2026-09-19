@@ -14,10 +14,41 @@
 # //
 # sim_build\vsim.wlf opened as dataset "vsim"
 add wave -position insertpoint  \
-vsim:/cordic_pipe/clk_i
+vsim:/cordic/x_o
 add wave -position insertpoint  \
-vsim:/cordic_pipe/rstn_i
+vsim:/cordic/y_o
 add wave -position insertpoint  \
-vsim:/cordic_pipe/en_i
-# Break key hit
-# Break key hit
+vsim:/cordic/z_o
+add wave -position insertpoint  \
+vsim:/cordic/valid_o
+add wave -position insertpoint  \
+vsim:/cordic/x_no_transform
+add wave -position end  vsim:/cordic/x_no_transform
+add wave -position insertpoint  \
+vsim:/cordic/en_i
+add wave -position insertpoint  \
+vsim:/cordic/rstn_i
+add wave -position insertpoint  \
+vsim:/cordic/clk_i
+add wave -position insertpoint  \
+vsim:/cordic/x_i
+add wave -position insertpoint  \
+vsim:/cordic/y_i
+add wave -position insertpoint  \
+vsim:/cordic/z_i
+add wave -position insertpoint  \
+vsim:/cordic/I_cordic_pipe/x_o
+add wave -position insertpoint  \
+vsim:/cordic/I_cordic_pipe/x_o
+add wave -position insertpoint  \
+{vsim:/cordic/I_cordic_pipe/gen_cordic_pipe[0]/I_cordic_stage/en_i}
+add wave -position insertpoint  \
+{vsim:/cordic/I_cordic_pipe/gen_cordic_pipe[0]/I_cordic_stage/x_o}
+add wave -position insertpoint  \
+{vsim:/cordic/I_cordic_pipe/gen_cordic_pipe[0]/I_cordic_stage/y_o}
+add wave -position insertpoint  \
+{vsim:/cordic/I_cordic_pipe/gen_cordic_pipe[13]/I_cordic_stage/x_o}
+add wave -position insertpoint  \
+{vsim:/cordic/I_cordic_pipe/gen_cordic_pipe[13]/I_cordic_stage/y_o}
+add wave -position insertpoint  \
+{vsim:/cordic/I_cordic_pipe/gen_cordic_pipe[13]/I_cordic_stage/z_o}

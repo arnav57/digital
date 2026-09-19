@@ -23,8 +23,9 @@ async def cordic_base_test(dut):
 	rst_mon.start()
 	cocotb.start_soon(clk.start())
 
-	# choose a random input on z [-90 to 90 deg]
-	z_value = random.randint(-16384, 16384)
+	# # choose a random input on z [-90 to 90 deg]
+	# z_value = random.randint(-16384, 16384)
+	z_value = random.randrange(65536)
 	z_degrees = z_value * (360.0 / 65536.0)
 
 	actual_sin = math.sin(math.radians(z_degrees))
@@ -58,17 +59,18 @@ async def cordic_base_test(dut):
 	dut.en_i.value = 0
 
 
-	await RisingEdge(dut.valid_o)
-	actual_x = cordic.x_out_mon.decimal_value
-	actual_y = cordic.y_out_mon.decimal_value
-	actual_z = cordic.z_out_mon.angle_value
+	result = await cordic.get_result()
+	err_sin = scaled_sin - result.y
+	err_cos = scaled_cos - result.x
+	ang_err = result.z_deg
 
-	err_sin = scaled_sin - actual_y
-	err_cos = scaled_cos - actual_x
-	ang_err = actual_z
 	deg_per_lsb = 360.0 / 65536.0
 	ang_err_lsb = ang_err / (deg_per_lsb)
 
 	logger.info(f"Error (sin) = {err_sin}")
 	logger.info(f"Error (cos) = {err_cos}")
 	logger.info(f"Error (deg) = {ang_err} ({ang_err_lsb} LSb)")
+
+	await RisingEdge(dut.clk_i)
+	await RisingEdge(dut.clk_i)
+	await RisingEdge(dut.clk_i)
