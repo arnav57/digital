@@ -50,6 +50,8 @@ def main():
     now = datetime.now().strftime("%B%d_%H%M%S")
     tb_top = args['tb']
 
+    print("\n\nrun.py starting build process...\n")
+
     print(
         f"Building tb = {tb_top}, "
         f"current timestamp is: {now}"
@@ -63,7 +65,7 @@ def main():
     test_file_path = find_test_file(test_file_name)
     sys.path.append(str(test_file_path.parent))
 
-    print(f"\n\n=== RUNNING TEST ===\n\n")
+    print(f"\n\n====================\n=== RUNNING TEST ===\n====================\n\n")
 
     ## create marker
     create_run_marker(build_dir)
