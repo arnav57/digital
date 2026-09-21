@@ -84,3 +84,5 @@ coverage.xml
 # ==============================================================================
 sim_build/
 waves/
+transcript
+modelsim.ini
