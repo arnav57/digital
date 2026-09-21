@@ -1,0 +1,294 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/arnav/Documents/deepseek/projects/capstone/memory/dv/sim_build_dma
+T_opt
+!i145 1
+!i144 0
+!s110 1789929987
+V]b3InoWh[5MQ^7VJ5;BEP0
+04 6 4 work tb_top fast 0
+=1-44fa661251ed-6ab02a02-3ac-7850
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U11 
+!s135 nogc
+o-quiet +acc -auto_acc_if_foreign -work top
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+OL;O;2025.2;82
+valtera_reset_controller
+2C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\altera_reset_controller.v
+Z3 !s10a 1789871730
+Z4 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z5 !s110 1789928459
+!i10b 1
+!s100 cHnHS3UnZcJ0G=P=4565<0
+IfCh82^lb5Hn=oM>SIPVI63
+S1
+R2
+Z6 w1789871730
+8C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\altera_reset_controller.v
+FC:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\altera_reset_controller.v
+!i122 1
+L0 42 278
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z9 !s108 1789928459.000000
+!s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\memory\\dv\\altera\\altera_reset_controller.v|
+!s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\altera_reset_controller.v|
+!i113 0
+Z10 o-quiet -work top -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0 defaultOptions 1085333592
+valtera_reset_synchronizer
+2C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\altera_reset_synchronizer.v
+R3
+R4
+!s110 1789928458
+!i10b 1
+!s100 m=LRo[59A<;TB?00ndBUk3
+I08b5Fi[]BLH4`6:GcR9U:1
+S1
+R2
+R6
+8C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\altera_reset_synchronizer.v
+FC:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\altera_reset_synchronizer.v
+!i122 0
+L0 24 63
+R7
+R8
+r1
+!s85 0
+31
+!s108 1789928458.000000
+!s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\memory\\dv\\altera\\altera_reset_synchronizer.v|
+!s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\altera_reset_synchronizer.v|
+!i113 0
+R10
+R11
+vsdram
+2C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram.v
+!s10a 1789871729
+R4
+R5
+!i10b 1
+!s100 o3b_HdZeOK5lL6W?RkEEe0
+IZ1>mY?Kzf7NonHb3JS4n33
+S1
+R2
+w1789871729
+8C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram.v
+FC:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram.v
+!i122 4
+L0 6 112
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\memory\\dv\\altera\\sdram.v|
+!s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram.v|
+!i113 0
+R10
+R11
+vsdram_new_sdram_controller_0
+Z12 2C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_new_sdram_controller_0.v
+R3
+R4
+R5
+!i10b 1
+!s100 F4ilG5I_3hXB7RA3S>OLI1
+I:@E@;;IKfMHjI[4=eRV9`2
+S1
+R2
+R6
+Z13 8C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_new_sdram_controller_0.v
+Z14 FC:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_new_sdram_controller_0.v
+!i122 2
+L0 159 550
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z15 !s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\memory\\dv\\altera\\sdram_new_sdram_controller_0.v|
+Z16 !s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_new_sdram_controller_0.v|
+!i113 0
+R10
+R11
+vsdram_new_sdram_controller_0_input_efifo_module
+R12
+R3
+R4
+R5
+!i10b 1
+!s100 VDKGbifGEWKfJ8XhBPJJ^1
+IFLX`faT0Go2dL2>QiXgKa2
+S1
+R2
+R6
+R13
+R14
+!i122 2
+L0 21 128
+R7
+R8
+r1
+!s85 0
+31
+R9
+R15
+R16
+!i113 0
+R10
+R11
+vsdram_new_sdram_controller_0_test_component
+Z17 2C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_new_sdram_controller_0_test_component.v
+R3
+R4
+R5
+!i10b 1
+!s100 nA1>XVI>jeig>GJUeUo0l1
+Ij:^imSTJIlLRAflIXO5M[2
+S1
+R2
+R6
+Z18 8C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_new_sdram_controller_0_test_component.v
+Z19 FC:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_new_sdram_controller_0_test_component.v
+!i122 3
+L0 114 165
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z20 !s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\memory\\dv\\altera\\sdram_new_sdram_controller_0_test_component.v|
+Z21 !s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_new_sdram_controller_0_test_component.v|
+!i113 0
+R10
+R11
+vsdram_new_sdram_controller_0_test_component_ram_module
+R17
+R3
+R4
+R5
+!i10b 1
+!s100 nL8]czjdH>j<JEVElSVH31
+Ie`6JT=eN@=OcmzN`DNMoR1
+S1
+R2
+R6
+R18
+R19
+!i122 3
+L0 21 83
+R7
+R8
+r1
+!s85 0
+31
+R9
+R20
+R21
+!i113 0
+R10
+R11
+vsdram_tb_top
+2C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_tb_top.v
+!s10a 1789872346
+R4
+R5
+!i10b 1
+!s100 I0=KdCnS6><dSX8?XOM][3
+I=;Jhm5fmDml7;mE@h]5P[3
+S1
+R2
+w1789872346
+8C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_tb_top.v
+FC:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_tb_top.v
+!i122 5
+L0 4 60
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\memory\\dv\\altera\\sdram_tb_top.v|
+!s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\altera\sdram_tb_top.v|
+!i113 0
+R10
+R11
+vsdram_temp
+2C:\Users\arnav\Documents\deepseek\projects\capstone\memory\rtl\sdram_temp.sv
+R4
+!s110 1789929985
+!i10b 1
+!s100 1kz6bE^2HOczE@8kWZ<0Z3
+IaBIA7RI1@H_QbJ?^P;_871
+S1
+R2
+w1789929974
+8C:\Users\arnav\Documents\deepseek\projects\capstone\memory\rtl\sdram_temp.sv
+FC:\Users\arnav\Documents\deepseek\projects\capstone\memory\rtl\sdram_temp.sv
+!i122 11
+L0 5 93
+R7
+R8
+r1
+!s85 0
+31
+!s108 1789929985.000000
+!s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\memory\\rtl\\sdram_temp.sv|
+!s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\memory\rtl\sdram_temp.sv|
+!i113 0
+R10
+R11
+vtb_top
+2C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\env\tb_top.sv
+!s10a 1789928263
+R4
+!s110 1789928609
+!i10b 1
+!s100 ^SYcbc139^?jm?`6^;j<`3
+I?F<bQkahnjXbc5<Vi`<ol0
+S1
+R2
+w1789928263
+8C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\env\tb_top.sv
+FC:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\env\tb_top.sv
+!i122 7
+L0 5 67
+R7
+R8
+r1
+!s85 0
+31
+!s108 1789928609.000000
+!s107 C:\\Users\\arnav\\Documents\\deepseek\\projects\\capstone\\memory\\dv\\env\\tb_top.sv|
+!s90 -quiet|-incr|-work|top|-sv|C:\Users\arnav\Documents\deepseek\projects\capstone\memory\dv\env\tb_top.sv|
+!i113 0
+R10
+R11
