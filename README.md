@@ -4,7 +4,7 @@
 
 ## Environment Setup
 
-This setup uses cocotb-2.1 to simulate alongside questa. You will need to do the following to setup the repository. Note that these instructions are for windows users. Linux users should be able to follow through a venv (hint: create a venv)
+This setup uses cocotb-2.1 to simulate alongside questa. You will need to do the following to setup the repository. Note that these instructions are for windows users. Linux users should be able to follow through a venv
 
 1. Install Miniconda
 1. git clone this repo
